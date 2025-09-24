@@ -1,9 +1,11 @@
+let passwordLength = 16
+
 function generatePassword() {
-    const chars = "abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ123456789!@#$%¨&*()_=-+/*."
+    const chars = "abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ123456789!@#$%¨&*(){}[]_=-+/*."
 
     let password = ""
 
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < passwordLength; i++) {
         const randomNumber = Math.floor(Math.random() * chars.length)
         password += chars.substring(randomNumber, randomNumber + 1)
     }
@@ -15,9 +17,9 @@ function generatePassword() {
 
 const passwordLengthElement = document.querySelector("#password-lenght")
 passwordLengthElement.addEventListener("input", function () {
-    const passwordLength = passwordLengthElement.value
+    passwordLength = passwordLengthElement.value
 
-    console.log(passwordLength)
+    generatePassword()
 })
 
 generatePassword()
