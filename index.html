@@ -1,26 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Gerador de Senhas</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1 class="title">Gerador de senha</h1>
-        <p class="subtitle">Gere a sua senha</p>
+      <h1 class="title">Gerador de senha</h1>
+      <p class="subtitle">Gere a sua senha</p>
     </header>
     <main>
-        <section class="generator">
-            <input type="text" name="password" id="password">
-            <input type="range" name="password-lenght" id="password-lenght" value="16" min="4" max="64">
-            <button id="copy">Copiar</button>
-        </section>
+      <section class="generator">
+        <div class="content">
+          <div class="password">
+            <input type="text" name="password" id="password" />
+          </div>
+          <div class="action">
+            <button id="copyPassword">
+              <img src="img/copiar.svg" alt="copiar">
+            </button>
+            <button id="create">
+              <img src="img/atualizar.svg" alt="atualizar">
+            </button>
+          </div>
+        </div>
+        <input
+          type="range"
+          name="password-lenght"
+          id="password-lenght"
+          value="16"
+          min="4"
+          max="64"
+        />
+        <button id="copy">Copiar</button>
+      </section>
     </main>
-</body>
-<script src="js/generatePassword.js"></script>
+  </body>
+  <script src="js/generatePassword.js"></script>
 </html>

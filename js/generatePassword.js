@@ -24,7 +24,8 @@ passwordLengthElement.addEventListener("input", function () {
 function copy() {
     navigator.clipboard.writeText(element.value)
 }
-const buttonCopy = document.querySelector("#copy")
-buttonCopy.addEventListener("click", copy)
+
+document.querySelector("#copy").addEventListener("click", copy)
+document.querySelector("#copyPassword").addEventListener("click", copy)
 
 generatePassword()
