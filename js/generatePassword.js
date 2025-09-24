@@ -25,6 +25,14 @@ function copy() {
     navigator.clipboard.writeText(element.value)
 }
 
+function toUpdate() {
+    const toUpdateElement = document.querySelector("#password")
+    toUpdateElement.value = ""
+
+    return generatePassword()
+}
+
+document.querySelector("#toUpdate").addEventListener("click", toUpdate)
 document.querySelector("#copy").addEventListener("click", copy)
 document.querySelector("#copyPassword").addEventListener("click", copy)
 
