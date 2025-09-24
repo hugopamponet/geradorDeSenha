@@ -1,0 +1,11 @@
+:root {
+    --cor-de-fundo: #f8fafd;
+    --cor-da-letra: #252525;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    font-size: "Inter", sans-serif;
+    color: var(--cor-da-letra);
+    padding: 2rem;
+}
