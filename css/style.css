@@ -1,9 +1,9 @@
 :root {
-    --background-color: #f8fafd;
-    --legend-color: ;
-    --letter-color: #252525;
-    --button-color: ;
-    --button-color-hover: ;
+    --background-color: #0D1B2A;
+    --legend-color: #E0E1DD;
+    --letter-color: #2EC4B6;
+    --button-color: #1D3557;
+    --button-color-hover: #457B9D;
 }
 
 :root {
@@ -14,7 +14,7 @@
 }
 
 body {
-    background-color: var(--cor-de-fundo);
+    background-color: var(--background-color);
     font-size: "Inter", sans-serif;
     color: var(--background-color);
     padding: 2rem;
@@ -31,6 +31,7 @@ header {
     padding-bottom: 0.5rem;
     font-family: "Roboto", sans-serif;
     font-size: 3rem;
+    color: var(--letter-color);
 }
 
 .subtitle {
