@@ -1,3 +1,7 @@
+document.querySelector("#toUpdate").addEventListener("click", toUpdate)
+document.querySelector("#copy").addEventListener("click", copy)
+document.querySelector("#copyPassword").addEventListener("click", copy)
+
 const element = document.querySelector("#password")
 let passwordLength = 16
 
@@ -31,9 +35,5 @@ function toUpdate() {
 
     return generatePassword()
 }
-
-document.querySelector("#toUpdate").addEventListener("click", toUpdate)
-document.querySelector("#copy").addEventListener("click", copy)
-document.querySelector("#copyPassword").addEventListener("click", copy)
 
 generatePassword()
