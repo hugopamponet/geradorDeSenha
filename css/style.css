@@ -156,3 +156,35 @@ main {
     transition: opacity 0.2s;
     margin-top: 1rem;
 }
+
+
+.generator .password-length .slider:hover {
+    opacity: 1;
+}
+
+.generator .password-length .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    background: #9b51e0;
+    cursor: pointer;
+}
+
+.generator .password-length .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+}
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
