@@ -38,6 +38,8 @@ const passwordLengthElement = document.querySelector("#password-lenght");
 passwordLengthElement.addEventListener("input", function () {
     passwordLength = passwordLengthElement.value;
 
+    document.querySelector("#password-length-text").innerText = passwordLength
+
     generatePassword();
 })
 
