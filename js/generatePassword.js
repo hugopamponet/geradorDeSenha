@@ -35,6 +35,7 @@ function generatePassword() {
     element.value = password;
 
     calculateQuality();
+    calculateFontSize()
 }
 
 const passwordLengthElement = document.querySelector("#password-lenght");
@@ -58,13 +59,13 @@ function calculateQuality() {
     if(percent > 69) {
         securityIndicatorBarElement.classList.remove("critical")
         securityIndicatorBarElement.classList.remove("warning")
-        securityIndicatorBarElement.classList.remove("safe")
+        securityIndicatorBarElement.classList.add("safe")
     }else if(percent > 50) {
         securityIndicatorBarElement.classList.remove("critical")
-        securityIndicatorBarElement.classList.remove("warning")
+        securityIndicatorBarElement.classList.add("warning")
         securityIndicatorBarElement.classList.remove("safe")    
     }else {
-        securityIndicatorBarElement.classList.remove("critical")
+        securityIndicatorBarElement.classList.add("critical")
         securityIndicatorBarElement.classList.remove("warning")
         securityIndicatorBarElement.classList.remove("safe")
     }
@@ -73,6 +74,26 @@ function calculateQuality() {
         securityIndicatorBarElement.classList.remove("completed")
     } else {
         securityIndicatorBarElement.classList.add("completed")
+    }
+}
+
+function calculateFontSize() {
+    if(passwordLength > 45) {
+        element.classList.remove("font-sm")
+        element.classList.remove("font-xs")
+        element.classList.add("font-xxs")
+    }else if(passwordLength > 32) {
+        element.classList.remove("font-sm")
+        element.classList.add("font-xs")
+        element.classList.remove("font-xxs")
+    }else if(passwordLength > 22) {
+        element.classList.add("font-sm")
+        element.classList.remove("font-xs")
+        element.classList.remove("font-xxs")
+    }else {
+        element.classList.remove("font-sm")
+        element.classList.remove("font-xs")
+        element.classList.remove("font-xxs")
     }
 }
 
